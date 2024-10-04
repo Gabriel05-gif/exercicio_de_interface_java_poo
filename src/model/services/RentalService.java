@@ -10,7 +10,7 @@ public class RentalService {
 	private Double pricePerhour;
 	private Double pricePerDay;
 	
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 	
 	public RentalService(Double pricePerhour, Double pricePerDay, BrazilTaxService taxService) {
 		this.pricePerhour = pricePerhour;
@@ -34,6 +34,4 @@ public class RentalService {
 		
 		carRental.setInvoice(new Invoice(basicPayment, tax));
 	}
-	
-	
 }

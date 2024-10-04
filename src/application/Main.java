@@ -39,9 +39,9 @@ public class Main {
 		rentalService.processInvoice(cr);
 		
 		System.out.println("FATURA:");
-		System.out.println("Pagamento Basico: " + cr.getInvoice().getBasicPayment());
-		System.out.println("Imposto: " + cr.getInvoice().getTax());
-		System.out.println("Pagamento total: " + cr.getInvoice().getTotalPayment());
+		System.out.println("Pagamento Basico: " + String.format("%.2f", cr.getInvoice().getBasicPayment()));
+		System.out.println("Imposto: " + String.format("%.2f",cr.getInvoice().getTax()));
+		System.out.println("Pagamento total: " + String.format("%.2f",cr.getInvoice().getTotalPayment()));
 		
 		sc.close();
 	}
